@@ -7,6 +7,8 @@ For a QuickStart, you can check out the example folder.
 This works due to a little modification of the [imgui-go wrapper by inkyblackness](https://github.com/inkyblackness/imgui-go).<br>
 you can get it with `go get github.com/RinLovesYou/imgui-go`<br>
 
+!! THIS MAKES A LOT OF ASSUMPTIONS ABOUT YOUR ENVIRONMENT. IT EXPECTS DEPENDENCIES LIKE MINHOOK/DX11/ETC TO BE INJECTED/PRESENT !!
+
 ## QuickStart
 
 ```go
