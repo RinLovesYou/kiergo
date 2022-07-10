@@ -1,6 +1,6 @@
 # Kiero-Golang-DirectX11-Hook
 
-This is a very dirty Golang implementation of Kiero Hook for Directx11. <br>
+This is a very dirty Golang implementation of [Kiero Hook for Directx11](https://github.com/Rebzzel/kiero). <br>
 For a QuickStart, you can check out the example folder.
 
 ## Information
