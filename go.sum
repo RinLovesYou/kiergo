@@ -1,0 +1,4 @@
+github.com/RinLovesYou/imgui-go v0.0.0-20220710004352-d408cc600ce5 h1:S2vChy3fnfsfvtzluZKei/8no3Nl+qNXorHEP/z7QzE=
+github.com/RinLovesYou/imgui-go v0.0.0-20220710004352-d408cc600ce5/go.mod h1:8uVCXpPcU0WphYMDVb0Jc37cRWijNI3gUgDd8F7FjNY=
+github.com/nanitefactory/gominhook v0.0.0-20190704081723-9e6cf28c511f h1:hkiy0lSUTXOUX1QdqmJ+bjsqhWRkx08RRqDwuV+Nd5k=
+github.com/nanitefactory/gominhook v0.0.0-20190704081723-9e6cf28c511f/go.mod h1:0lhPAv4i6682RaT7ZT97nI8GTqSt9rW6EY0RdiykQV0=
