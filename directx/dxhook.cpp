@@ -39,7 +39,6 @@ WNDCLASSEX windowClass;
 
 void *FindPresent()
 {
-    printf("FindPresent\n");
    windowClass = CreateDummyWindowClass();
 
    HWND window = ::CreateWindow(windowClass.lpszClassName, KIERO_TEXT("Kiergo DirectX Window"), WS_OVERLAPPEDWINDOW, 0, 0, 100, 100, NULL, NULL, windowClass.hInstance, NULL);
