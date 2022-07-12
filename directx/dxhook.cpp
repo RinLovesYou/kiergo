@@ -2,6 +2,7 @@
 #include <d3d11.h>
 #include <dxgi.h>
 #include <stdint.h>
+#include <stdio.h>
 
 #ifdef _UNICODE
 #define KIERO_TEXT(text) L##text
@@ -38,15 +39,17 @@ WNDCLASSEX windowClass;
 
 void *FindPresent()
 {
+    printf("FindPresent\n");
    windowClass = CreateDummyWindowClass();
 
    HWND window = ::CreateWindow(windowClass.lpszClassName, KIERO_TEXT("Kiergo DirectX Window"), WS_OVERLAPPEDWINDOW, 0, 0, 100, 100, NULL, NULL, windowClass.hInstance, NULL);
 
    HMODULE libD3D11;
-   if ((libD3D11 = ::GetModuleHandle(KIERO_TEXT("d3d11.dll"))) == NULL)
+   if ((libD3D11 =::LoadLibrary(KIERO_TEXT("d3d11.dll"))) == NULL)
    {
       ::DestroyWindow(window);
       ::UnregisterClass(windowClass.lpszClassName, windowClass.hInstance);
+      printf("Failed to load d3d11.dll\n");
       return nullptr;
    }
 
@@ -55,6 +58,7 @@ void *FindPresent()
    {
       ::DestroyWindow(window);
       ::UnregisterClass(windowClass.lpszClassName, windowClass.hInstance);
+      printf("Failed to get address of D3D11CreateDeviceAndSwapChain\n");
       return nullptr;
    }
 
@@ -104,6 +108,7 @@ void *FindPresent()
    {
       ::DestroyWindow(window);
       ::UnregisterClass(windowClass.lpszClassName, windowClass.hInstance);
+      printf("Failed to create device and swap chain\n");
       return nullptr;
    }
 
